@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GeneralViewController" customModule="ImageGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-br-62N">
+                                <rect key="frame" x="20" y="109" width="228" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YoS-ll-yQH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-fP-gAj">
+                                <rect key="frame" x="273" y="109" width="100" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Iq-fC-mYa"/>
+                                    <constraint firstAttribute="width" constant="100" id="2aS-M0-8xe"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedGenerateButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2zX-V4-LtX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-J6-Ekx">
+                                <rect key="frame" x="20" y="189" width="353" height="500"/>
+                                <accessibility key="accessibilityConfiguration" identifier="GeneralImageView"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-GC-S13">
+                                <rect key="frame" x="121.33333333333333" y="709" width="150.66666666666669" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1vS-Np-6Tj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to favourite">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedAddToFavouriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xdP-Vl-2bj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EqL-fP-gAj" secondAttribute="trailing" constant="20" id="MO7-qR-6Iu"/>
+                            <constraint firstItem="KDn-GC-S13" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Rqw-Q2-FeD"/>
+                            <constraint firstItem="7bb-J6-Ekx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="SNh-z2-D0c"/>
+                            <constraint firstItem="7bb-J6-Ekx" firstAttribute="top" secondItem="u5u-br-62N" secondAttribute="bottom" constant="30" id="Su0-ug-XjH"/>
+                            <constraint firstItem="u5u-br-62N" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="UQo-FN-aM9"/>
+                            <constraint firstItem="u5u-br-62N" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="YqQ-53-xoQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KDn-GC-S13" secondAttribute="bottom" constant="10" id="ZaZ-k6-Y5a"/>
+                            <constraint firstItem="EqL-fP-gAj" firstAttribute="leading" secondItem="u5u-br-62N" secondAttribute="trailing" constant="25" id="aQt-fq-GDa"/>
+                            <constraint firstItem="EqL-fP-gAj" firstAttribute="centerY" secondItem="u5u-br-62N" secondAttribute="centerY" id="eGG-2y-i5H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7bb-J6-Ekx" secondAttribute="trailing" constant="20" id="hpg-Hk-3ak"/>
+                            <constraint firstItem="KDn-GC-S13" firstAttribute="top" secondItem="7bb-J6-Ekx" secondAttribute="bottom" constant="20" id="lmp-5M-grh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="book" catalog="system" selectedImage="book.fill" id="HmH-T1-Jn0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addToFavouriteButton" destination="KDn-GC-S13" id="OvL-aw-a01"/>
+                        <outlet property="generateButton" destination="EqL-fP-gAj" id="GdO-oM-Rr0"/>
+                        <outlet property="generatedImageView" destination="7bb-J6-Ekx" id="pyb-rQ-Pti"/>
+                        <outlet property="searchTextField" destination="u5u-br-62N" id="84N-YV-flS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3.8167938931297707" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+    </resources>
+</document>
